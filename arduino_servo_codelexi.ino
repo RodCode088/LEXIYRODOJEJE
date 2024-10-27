@@ -55,3 +55,4 @@ void moverServo(int distancia) {
   myservo.write(pos); // Mueve el servo
   delay(map(distancia, 0, 30, 10, 100)); // Delay inversamente proporcional a la distancia
 }
+//david come burro
