@@ -19,4 +19,4 @@ void loop()
   distancia = (duracion * 0.034) / 2;
   Serial.println(distancia);
   delay(500);
-} 
+}
