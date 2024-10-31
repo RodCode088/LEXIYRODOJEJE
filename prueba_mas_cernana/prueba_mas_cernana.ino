@@ -7,7 +7,7 @@ const int echoPin = 11;  // Pin Echo del sensor ultrasónico
 
 void setup() {
   Serial.begin(9600);  // Inicia la comunicación serie
-  myServo.attach(12);  // Conecta el servo al pin 11
+  myServo.attach(12);  // Conecta el servo al pin 12
   pinMode(trigPin, OUTPUT);  // Configura el pin de Trigger como salida
   pinMode(echoPin, INPUT);   // Configura el pin de Echo como entrada
 }
@@ -32,7 +32,7 @@ void loop() {
   Serial.print(distance);
   Serial.println(" cm");
 
-  // Si la distancia es menor a un umbral (por ejemplo, 20 cm)
+  // Si la distancia es mayor a un umbral (por ejemplo, 20 cm)
   if (distance > 20) {
     // Mueve el servo hacia la dirección del objeto
     myServo.write(90);  // Cambia el ángulo según la dirección deseada
@@ -41,5 +41,5 @@ void loop() {
     myServo.write(0);  // Posición de reposo
   }
 
-  delay(500);  // Espera medio segundo antes de la siguiente lectura
+  delay(1500);  // Espera medio segundo antes de la siguiente lectura
 }
